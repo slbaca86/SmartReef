@@ -1,0 +1,15 @@
+$(".togglebuttonlights").click(function(){
+	$.get('/toggle/19');
+});
+$("#togglebuttonpumpmain").click(function(){
+	$.get('/toggle/16');
+});
+$("#togglebuttonpumpin").click(function(){
+	$.get('/toggle/12');
+});
+$("#togglebuttonpumpato").click(function(){
+	$.get('/ato');
+});
+$("#togglebuttonpumpout").click(function(){
+	$.get('/toggle/6');
+});

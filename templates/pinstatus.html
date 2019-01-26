@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% for pin in inpins %}
+    <p>The {{ inpins[pin].name }}
+    {% if inpins[pin].state == true %}
+      is currently on
+    {% else %}
+      is currently off
+    {% endif %}
+    </p>
+    {% endfor %}
+    {% for pin in outpins %}
+    <p>The {{ outpins[pin].name }}
+    {% if outpins[pin].state == true %}
+      is currently on
+    {% else %}
+      is currently off
+    {% endif %}
+    </p>
+    {% endfor %}
+
+
+  </body>
+</html>

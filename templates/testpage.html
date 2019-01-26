@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="./assets/img/kit/free/apple-icon.png">
+    <link rel="icon" href="./assets/img/kit/free/favicon.png">
+    <title>
+        Nature Automated
+    </title>
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="{{  url_for('static',filename='assets/css/material-kit.css')  }}"/>
+    <!-- Documentation extras -->
+
+
+
+</head>
+
+<body class="index-page ">
+    <nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg " color-on-scroll="100" id="sectionsNav">
+        <div class="container">
+            <div class="navbar-translate">
+                <a class="navbar-brand" href="./index.html">SmartReef</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="dropdown nav-item">
+                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                            <i class="material-icons">apps</i> Tank
+                        </a>
+                        <div class="dropdown-menu dropdown-with-icons">
+                            <a href="./index.html" class="dropdown-item">
+                                <i class="material-icons">layers</i> 14G Nanocube Mixed Reef
+                            </a>
+                            <a href="http://demos.creative-tim.com/material-kit/docs/2.0/getting-started/introduction.html" class="dropdown-item">
+                                <i class="material-icons">content_paste</i> Documentation
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="scrollToDownload()">
+                            <i class="material-icons">settings</i> Settings
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank" data-original-title="Follow us on Twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank" data-original-title="Like us on Facebook">
+                            <i class="fa fa-facebook-square"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank" data-original-title="Follow us on Instagram">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="page-header header-filter clear-filter blue-filter" data-parallax="true" style="background-image: url({{ url_for("static", filename="assets/img/reef.jpg" )  }} )">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 ml-auto mr-auto">
+                    <div class="brand">
+                      <h1 class ="h1">Nature Automated</h1>
+                      <h3>Life is a balance, keep it in check.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main main-raised">
+        <div class="section section-basic">
+            <div class="container">
+                <div class="title">
+                    <center><h2>14G Biocube Mixed Reef</h2>
+                </div>
+                <!--  buttons -->
+                <div id="buttons" class="cd-section">
+                    <center>
+                    <div class="row">
+                        <div class="col-md-8 ml-auto mr-auto">
+                            <button   class="btn btn-primary btn-lg" type="submit" name="systemp" value="" onclick="window.location.reload();"><h3>Temp</h3>{{ temp }}</button>
+                            <button   class="btn btn-primary btn-lg togglebuttonlights"  type="submit" name="lightstat" onclick="window.location.reload();" value=""><h3>Lights</h3>{{ lights }}</button>
+                            <button   class="btn btn-primary btn-lg" type="submit" name="waterchange" onclick = "" value=""><h3>%H20</h3>{{ waterchange }}</button>
+                            <button   class="btn btn-primary btn-lg" type="submit" name="tillFeed" onclick = "" value=""><h3>LastTest</h3>{{ time }}</button>
+                            <button   class="btn btn-primary btn-lg" type="submit" name="addBtn" onclick = ";" value="userTitle"><h3>Feed</h3>{{time}}</button>
+                            <button   class="btn btn-primary btn-lg" type="submit" name="pumpstat" onclick = "" value="userTitle"><h3>Pump</h3>{{ pumpstatmain }}</button>
+                        </div>
+                    </div>
+                    </center>
+                </div>
+                <!--                 end buttons		         -->
+                    <div class="container">
+                        <!--                nav tabs	             -->
+                        <div id="nav-tabs">
+                            <div class="row">
+
+                                <div class="col-md-12">
+                                    <!-- Tabs on Plain Card -->
+                                    <div class="card card-nav-tabs card-plain">
+                                        <div class="card-header card-header-primary">
+                                            <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                                            <div class="nav-tabs-navigation">
+                                                <div class="nav-tabs-wrapper">
+                                                    <ul class="nav nav-tabs" data-tabs="tabs">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link active" href="#home" data-toggle="tab">Organics</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="#temp" data-toggle="tab">Temp</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="#waterLevel" data-toggle="tab">Water Level</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="#home" data-toggle="tab">pH</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="#home" data-toggle="tab">Livestock</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="#home" data-toggle="tab">Filtration</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body ">
+                                            <div class="tab-content text-center">
+                                                <div class="tab-pane active" id="home">
+                                                  <div style="">
+                                                  <!-- bar chart canvas element --><canvas id="chart1" width="400px" height="400px"></canvas>
+                                                  </div>
+                                                </div>
+                                                <div class="tab-pane" id="waterLevel">
+                                                  <div style="">
+                                                  <!-- bar chart canvas element --><canvas id="chart2" width="400" height="350"></canvas>
+                                                  </div>
+                                                </div>
+                                                <div class="tab-pane" id="temp">
+                                                  <div style="">
+                                                  <!-- bar chart canvas element --><canvas id="chart2" width="400" height="350"></canvas>
+                                                  </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Tabs on plain Card -->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                <!-- 	            end nav tabs -->
+
+                <!--                 textarea/checkbox/radio/toggle -->
+                <div id="checkRadios">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="togglebutton">
+                                <label>
+                                    <input class="togglebuttonlights" type="checkbox" {{checklights}} onclick="window.location.reload();">
+                                    <span class="toggle"></span>
+                                    Light Control
+                                </label>
+                            </div>
+                            <div class="togglebutton">
+                                <label>
+                                    <input id="togglebuttonpumpmain" type="checkbox" {{checkpumpmain}}>
+                                    <span class="toggle"></span>
+                                    Main Pump
+                                </label>
+                            </div>
+			                      <div class="togglebutton">
+                                <label>
+                                    <input id="togglebuttonpumpato" type="checkbox"  {{checkpumpato}} >
+                                    <span class="toggle"></span>
+                                    ATO
+                                </label>
+                            </div>
+			                      <div class="togglebutton">
+                                <label>
+                                    <input id="togglebuttonpumpin" type="checkbox"  {{checkpumpin}} >
+                                    <span class="toggle"></span>
+                                    Pump In
+                                </label>
+                            </div>
+			                      <div class="togglebutton">
+                                <label>
+                                    <input id="togglebuttonpumpout" type="checkbox"  {{checkpumpout}} >
+                                    <span class="toggle"></span>
+                                    Pump Out
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-70"></div>
+            </div>
+        </div>
+      <div class="section section-navbars cd-section" id="navigation">
+            <div class="container">
+
+
+    </div>
+    <!-- Classic Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="material-icons">clear</i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link">Nice Button</button>
+                    <button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  End Modal -->
+    <footer class="footer ">
+        <div class="container">
+            <nav class="pull-left">
+                <ul>
+                    <li>
+                        <a href="">
+                            New Age Tech Solutions
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            About Us
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="copyright pull-right">
+                &copy;
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>, New Age Tech Solutions<a href="mynats.com" target="_blank"></a>
+            </div>
+        </div>
+    </footer>
+    <!--   Core JS Files   -->
+    <script src="{{ url_for('static', filename="assets/js/core/jquery.min.js") }}"></script>
+    <script src="{{ url_for('static', filename="assets/js/core/popper.min.js") }}"></script>
+    <script src="{{ url_for('static', filename="assets/js/bootstrap-material-design.js") }}"></script>
+    <script src="{{ url_for('static', filename="assets/js/javascript.js") }}"></script>
+    <script src="{{ url_for('static', filename="assets/js/Chart.js") }}"></script>
+    <script src="{{ url_for('static', filename="assets/js/Chart.min.js") }}"></script>
+    <!--  Plugin for Date Time Picker and Full Calendar Plugin  -->
+    <script src="{{ url_for('static', filename="assets/js/plugins/moment.min.js") }}"></script>
+    <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+    <script src="{{ url_for('static', filename="assets/js/plugins/bootstrap-datetimepicker.min.js") }}"></script>
+    <!--	Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+    <script src="{{ url_for('static', filename="assets/js/plugins/nouislider.min.js") }}"></script>
+    <!-- Material Kit Core initialisations of plugins and Bootstrap Material Design Library -->
+    <script src="{{ url_for('static', filename="assets/js/material-kit.js") }}"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            //init DateTimePickers
+            materialKit.initFormExtendedDatetimepickers();
+
+            // Sliders Init
+           /* materialKit.initSliders();*/
+        });
+
+        // bar chart data
+         var barData = {
+         labels : [{% for item in labels %}
+        								"{{item}}",
+        						{% endfor %}],
+         datasets : [{
+            label: "Water Level",
+            backgroundColor: "rgb(26, 87, 172)",
+        		data: [{% for item in values %}
+        										{{item}},
+        									{% endfor %}]
+        		}
+          ]
+         }
+
+         var yLabels = {
+           0: "LOW",
+           1: "MID",
+           2: "TOP",
+         }
+
+         var levelsData = {
+         labels : [{% for item in tests %}
+        								"{{item}}",
+        						{% endfor %}],
+         datasets : [{
+            label: "Levels",
+  					backgroundColor: "rgb(26, 87, 172)",
+        	  data : [{% for item in testvalues %}
+        										"{{item}}",
+        									{% endfor %}]
+        		}
+          ]
+         }
+
+         // get bar chart canvas
+        var ctx1 = document.getElementById("chart1").getContext("2d");
+        var ctx2 = document.getElementById("chart2").getContext("2d");
+
+
+        var chart1 = new Chart(ctx1, {
+        type: 'horizontalBar',
+        data: levelsData,
+        options:{
+            responsive: true,
+            scales: {
+                xAxes: [{
+                  ticks: {
+                    display: true,
+                    fontSize: 12
+            }
+          }]
+        }
+        }
+        });
+
+        var chart2 = new Chart(ctx2, {
+        type: 'bar',
+        data: barData,
+        options: {
+            scales: {
+              yAxes:[{
+                ticks: {
+                  max:2,
+                  beginAtZero: true,
+                  callback: function(value, index, values) {
+                      return yLabels[value];
+                  }
+                }
+              }]
+            }
+        }
+        });
+    </script>
+
+</body>
+
+</html>
